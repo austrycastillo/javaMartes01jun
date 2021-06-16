@@ -1,0 +1,135 @@
+package com.educacionit.jugando;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		/*
+		 * while(condición){ instrucciones ajuste }
+		 */
+		/*
+		 * int num = 1; while(num <= 10) { System.out.println(num); num++;//num = num +
+		 * 1; }
+		 */
+		// prueba de escritorio
+		// num => 11
+		// impresora => 1 2 3 4 5 6 7 8 9 10
+		/*
+		 * int num = 1; while(num <= 10) { if(num!=2 && num!=9) {
+		 * System.out.println(num); } num++;//num = num + 1; }
+		 */
+		// armar uno que imprima
+		// los números del 500 al 200 de
+		// 10 en 10
+		/*
+		 * int x = 500; while (x >= 200) { System.out.println(x); x -= 10;//x = x - 10;
+		 * }
+		 */
+
+		/*
+		 * do{ instrucciones ajuste }while(condición)
+		 */
+		/*
+		 * int y = 100; do { System.out.println(y); y++; } while (y <= 5);
+		 */
+
+		/*
+		 * if(false) System.out.println("Estoy dentro"); else
+		 * System.out.println("Estoy else");
+		 */
+
+		/*
+		 * 
+		 * for(inicio;condición;ajuste){ instrucciones }
+		 */
+		/*
+		 * for (int i = 5; i < 14; i++) { System.out.println(i); }
+		 */
+		// realice un programa que sume
+		// los números del 100 al 150
+		// ej 100 + 101 + 102 +103 ... + 150
+		/*
+		 * int suma = 0; for (int i = 100; i <= 150; i++) { suma += i;// suma = suma +
+		 * i; System.out.println("llevamos acumulado " + suma); }
+		 * System.out.println("La suma es " + suma);
+		 */
+
+		/*
+		 * @
+		 * 
+		 * @@
+		 * 
+		 * @@@
+		 * 
+		 * @@@@
+		 * 
+		 * @@@@@
+		 * 
+		 * @@@@@@
+		 */
+		/*
+		 * String dato = ""; for(int i = 1; i < 7;i++) { dato+= "@";
+		 * System.out.println(dato); }
+		 */
+
+		/*
+		 * solicitar un número al usuario mostrar la tabla de multiplicar ej. 6 X 1 = 6
+		 * 6 X 2 = 12
+		 * 
+		 */
+		/*
+		 * System.out.println("Escribe un número del uno al 10"); int b =
+		 * teclado.nextInt(); if(b > 0 && b <= 10) { for(int i = 0; i <= 10; i++) {
+		 * System.out.println(b + " X " + i + " = " + (b * i)); } }else {
+		 * System.out.println("Número no corresponde al juego"); }
+		 */
+		/*
+		 * 1 x 1 = 1 1 x 2 = 2 ... 2 x 1 = 2
+		 */
+		/*
+		 * for(int i = 1;i <= 10;i++) { for(int j = 1;j <=10; j ++) {
+		 * System.out.println(i + " x " + j + " = " + (i*j)); }
+		 * System.out.println("**************"); }
+		 */
+		// i --> 11
+		// j --> 1
+		// imprimir 1x1=1, 1x2=2,..., 2x1=2, 2x2=4
+		/*
+		 * competencia de atletismo solicitar la cantidad de atletas solicitar los
+		 * minutos por cada atleta decir el ganador
+		 */
+		/*
+		 * double tiempo = 0, min = 100;
+		 * System.out.println("Cantidad de atletas a participar"); int atletas =
+		 * teclado.nextInt(); for (int i = 1; i <= atletas; i++) {
+		 * System.out.println("Ingrese los minutos para este atleta"); tiempo =
+		 * teclado.nextDouble(); if (tiempo < min) { min = tiempo; } }
+		 * System.out.println("El atleta ganador tardó un tiempo de " + min);
+		 */
+
+		/*
+		 * boolean op = true; int X = 0; while(op) { System.out.println("Saludando");
+		 * System.out.println("¿Deseas salir? Marca 1"); X = teclado.nextInt(); if(X==1)
+		 * { op = false; }
+		 * 
+		 * } System.out.println("Terminé");
+		 */
+		/*
+		 * DESARROLLAR UN MINI SISTEMA DE CAJA variables: cantidad, precio por cada
+		 * fruta, opción, peso, total de compra
+		 */
+		int cant = 0, precioFrut = 120, precioBan = 100, precioKi = 90;
+		int opc = 1, peso = 0, total = 0, subFrut = 0, subBan = 0, subKi = 0;
+		while (opc != 0) {
+			System.out.println(
+					"***Escribe el número opción\n" + "\t1 Frutilla\n\t2 Banana\n\t3 Kiwi\n\t 0 Terminar compra");
+			opc = teclado.nextInt();
+			switch (opc) {
+
+			}
+		}
+	}
+
+}
