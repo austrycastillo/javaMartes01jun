@@ -1,0 +1,57 @@
+System.out.println("Hola Mundo de Java" );
+		//comentario de una línea
+		/*
+		 comentarios de varias 
+		 System.out.println esto es para imprimir 
+		 en la consola
+		 sintaxis variable:
+		 tipo_datos identificador;   --> declarar
+		 identificador = valor;      --> inicializar
+		 tipo_datos identificador = valor; --> declaro e inicializo
+		 */
+		byte edad;
+		edad = 20;
+		short stock = 8450;
+		int dni = 12345678;
+		System.out.println(stock);
+		double a = 2.5;
+		float b = 45.89f;
+		boolean resultado = true;//false o true
+		char c = 'A';
+		String nombre = "Austry";
+		System.out.println("Mi nombre es " + nombre);
+		nombre = "Cleopatra";
+		System.out.println("Ahora me llamo " + nombre);
+		nombre = "Pedro";
+		System.out.println("Ahora me llamo " + nombre);
+		//operaciones aritméticas: + - * / %
+		System.out.println(2 + 4);
+		System.out.println(6 % 4);
+		int d = 10;
+		int e = 5;
+		System.out.println(d + e);
+		int g = d + e;
+		System.out.println(g);
+		//operaciones de comparativas: < > <= >= == !=
+		System.out.println(d > e);
+		System.out.println(d == e);
+		//operadores lógicos: &&(and) || (or)
+		/*
+		 true && true  = true -->todo tiene que ser verdadero
+		 true && false = false
+		 false && true = false
+		 false && false= false
+		 
+		 false || false = false
+		 false || true  = true
+		 true || false  = true
+		 true || true   = true
+		 */
+		boolean h = true;
+		boolean i = false;
+		System.out.println(h && i);
+		System.out.println(h || i);
+		d+= 5; // d = d + 5
+		System.out.println(d);
+		e++;//e = e + 1  --> también --
+		System.out.println(e);

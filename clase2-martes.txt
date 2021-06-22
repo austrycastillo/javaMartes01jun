@@ -1,0 +1,93 @@
+package com.educacionit.practica;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		/*
+		 * if(condición){ instrucciones }
+		 ***********
+		 * if(condición){ instrucciones 1 }else{ instrucciones 2 }
+		 * 
+		 * if() { if() {
+		 * 
+		 * } }
+		 */
+		/*
+		 * int a = 2; if(a > 10) { System.out.println("Si es mayor"); }else {
+		 * System.out.println("No es mayor");
+		 * 
+		 * }
+		 */
+		/*
+		 * vamos al boliche, solo podemos ingresar si tenemos entre 18 y 30 si tienen 22
+		 * otorgar una bebida gratis si no puede pasar indicar la razón
+		 */
+		/*
+		 * 
+		 * System.out.println("Escribe tu edad"); int edad = teclado.nextInt();
+		 * 
+		 * if (edad >= 18 && edad <= 30) { System.out.println("Bienvenido al Boliche");
+		 * if (edad == 22) { System.out.println("Tienes una bebida gratis ;)"); } } else
+		 * { System.out.println("Ups no puedes pasar ;("); if(edad < 18) {
+		 * System.out.println("...por bebito"); }else {
+		 * System.out.println("...por viejito"); } }
+		 */
+		/*
+		 * if(){ }else if(){ }else if(){ }else{ } solicitar un número del teclado vamos
+		 * a mostrar si tiene 1,2,3,4 o más cifras ej: 60
+		 */
+		/*
+		 * System.out.println("Escribe un número"); int numero = teclado.nextInt(); if
+		 * (numero >=1 && numero < 10) { System.out.println(numero +
+		 * " tiene una cifra"); } else if (numero > 9 && numero < 100) {
+		 * System.out.println(numero + " tiene dos cifras"); } else if (numero > 99 &&
+		 * numero < 1000) { System.out.println(numero + " tiene tres cifras"); } else if
+		 * (numero > 999 && numero < 10000) { System.out.println(numero +
+		 * " tiene cuatro cifras"); } else if (numero > 9999) {
+		 * System.out.println(numero + " tiene más de cuatro cifras"); } else {
+		 * System.out.println("No corresponde"); }
+		 */
+
+		/*
+		 * switch(variable){ case "valor1": instrucciones break; case "valor2":
+		 * instrucciones break; default: instrucciones break; }
+		 */
+		/*
+		 * String color = "VERDE"; switch (color) { case "amarillo":
+		 * System.out.println("Es amarillo"); break; case "rojo":
+		 * System.out.println("Es rojo"); break; case "azul":
+		 * System.out.println("Es azul"); break; case "verde": case "VERDE": case
+		 * "Verde": System.out.println("Es verde"); break; case "negro":
+		 * System.out.println("Es negro"); break; default:
+		 * System.out.println("No existe el color"); break; }
+		 */
+		/*
+		 * Desarrollar un sistema de cajero automático --solicitar clave por teclado
+		 * --verificar si es la correcta --mostrar un menú: 1) consulta 2) depósito 3)
+		 * retiro 4)transf
+		 * 
+		 * clave, opcion, saldo, claveGuardada, monto, cbu, nombre
+		 * 
+		 */
+		int clave, opcion, saldo, claveGuardada = 123, monto;
+		String cbu, nombre;
+		System.out.println("***Bienvenido al banco Plumplum***\n" + 
+		" \tEscribe tu contraseña ");
+		clave = teclado.nextInt();
+		if (clave == claveGuardada) {
+			System.out.println("***Menú de opciones, marque el número a tramitar"
+					+ "\n\t 1 Consulta\n\t 2 Depósito\n\t 3 Retiro" + "\n\t 4 Transferencia");
+			opcion = teclado.nextInt();
+			switch(opcion) {
+			
+			}
+		} else {
+			System.out.println("Datos incorrectos");
+		}
+
+	}
+
+}
