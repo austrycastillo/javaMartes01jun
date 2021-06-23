@@ -1,0 +1,120 @@
+package com.educacionit.modules;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		/*
+		 * tipo [] identificador;declarar identificador = new tipo[tamaño]; //dos pasos
+		 * juntos tipo [] identificador = new tipo[tamaño]; tipo [] identificador =
+		 * {valor,valor,valor};
+		 * 
+		 */
+		/*
+		 * int[] numeros = new int[5]; numeros[0] = 2; numeros[1] = 25; numeros[2] = 7;
+		 * numeros[3] = 4; numeros[4] = 1; System.out.println(numeros[2]); numeros[2] =
+		 * 750; System.out.println(numeros[2]); String nombres[] = { "Elizmar",
+		 * "Rasbel", "Nahuel", "Enmanuel", "Natasha" }; System.out.println(nombres[2]);
+		 * for (int i = 0; i < nombres.length; i++) { System.out.println(nombres[i]); }
+		 */
+
+		/*
+		 * crear un arreglo con 8,3,4,5,6 buscar el mínimo
+		 */
+
+		/*
+		 * int arreglo[] = { 8, 3, 4, 5, 6 }; int min = arreglo[0]; for (int i = 0; i <
+		 * arreglo.length; i++) { if(arreglo[i] < min) { min = arreglo[i]; } }
+		 * System.out.println("El menor es " + min);
+		 */
+
+		/*
+		 * crear un arreglo con los números del 1 al 100 luego sumar todos los números
+		 * además mostrar el promedio
+		 */
+		/*
+		 * int[] arreglo = new int[100]; int suma = 0; for (int i = 0, j = 1; i <
+		 * arreglo.length; i++, j++) { arreglo[i] = j; } for (int i = 0; i <
+		 * arreglo.length; i++) { suma += arreglo[i]; System.out.println(arreglo[i]); }
+		 * System.out.println("La suma es " + suma);
+		 * System.out.println("El promedio es " + (suma/arreglo.length));
+		 */
+		// solicitar un dato
+		/*
+		 * String dato = JOptionPane.showInputDialog("Ingresa tu nombre");
+		 * System.out.println(dato); //alerta JOptionPane.showMessageDialog(null,
+		 * "Holaaaaa"); int x = JOptionPane.showConfirmDialog(null, "seguro???");
+		 * System.out.println(x);
+		 */
+		/*
+		 * copiar un arreglo con los dias de la semana dentro de otro
+		 */
+
+		/*
+		 * String[] dias = { "lunes", "martes", "miércoles", "jueves", "viernes" };
+		 * String[] diasCopy = new String[dias.length]; /*for (int i = 0; i <
+		 * dias.length; i++) { diasCopy[i] = dias[i]; }
+		 */
+		/*
+		 * System.arraycopy(dias, 0, diasCopy, 0, dias.length);
+		 * System.out.println("****DIAS ORIGINALES:"); for(int i = 0;i <
+		 * dias.length;i++) { System.out.println(dias[i]); }
+		 * System.out.println("****DIAS COPIA:"); for(int i = 0;i < diasCopy.length;i++)
+		 * { System.out.println(diasCopy[i]); }
+		 */
+
+		/*
+		 * TIENDA DE GOLOSINAS armar un arreglo con las golosinas armar otro arreglo con
+		 * los precios el usuario indica lo que desea comprar y la cantidad agregar
+		 * descuento si supera X cantidad de compra variables a utilizar: gol - precio -
+		 * cantidad - subtotal - total - opción descuento - seguir
+		 * 
+		 */
+		String gol[] = { "chocolate", "oreos", "papas fritas", "alfajores", "macucas", "caramelos" };
+		double precios[] = { 40, 300.5, 10, 50, 75, 35.6 };
+		int cantidad[] = { 0, 0, 0, 0, 0, 0 };
+		double subtotal[] = new double[6];
+		double total = 0;
+		int option;
+		double desc_max = 150;
+		double desc = 0.95;
+		boolean cont = false;
+		String letra = "";
+		System.out.println("*****BIENVENIDO TIENDA GLUGLU******");
+		do {
+			System.out.println("¿Qué desea comprar?\n\t1 chocolate" + "\n\t2 oreos \n\t3 papas fritas\n\t4 alfajores"
+					+ "\n\t5 macucas \n\t6 caramelos");
+			option = teclado.nextInt();
+			switch (option) {
+			case 1:
+				option--;
+				System.out.println("Precio del " + gol[option] + ": " + precios[option]);
+				System.out.println("Escribe la cantidad de " + gol[option] + " a comprar");
+				cantidad[option] = teclado.nextInt();
+				break;
+			}
+			System.out.println("¿Deseas seguir comprando? S/N");
+			letra = teclado.next();
+			if (letra.equals("S")) {
+				cont = true;
+			} else {
+				cont = false;
+			}
+		} while (cont);
+		for(int i=0;i < precios.length;i++) {
+			subtotal[i] = precios[i] * cantidad[i];
+			total += subtotal[i];
+		}
+		System.out.println("Subtotal --> " + total);
+		if(total >= desc_max ) {
+			total *= desc;
+			System.out.println("Tienes descuento ;)");
+		}
+		System.out.println("Total a pagar --> " + total);
+	}
+
+}
