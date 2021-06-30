@@ -1,0 +1,191 @@
+package com.educacionit.modules;
+import java.util.Scanner;
+
+public class AppPrincipal {
+	/*
+	 * modificadorDeAcceso static tipoRetorno identificador(){ INSTRUCCIONES... }
+	 */
+	// procedimiento
+	public static void iniciar() {
+		System.out.println("...iniciando a la 1");
+		System.out.println("...iniciando a las 2");
+		System.out.println("...iniciando a las 3");
+		System.out.println("motor encendido");
+	}
+
+	public static void saludar(String nombre) {
+		System.out.println("Hola " + nombre);
+	}
+
+	public static void sumar(int a, int b, String operacion) {
+		System.out.println("Según la operación de " + operacion);
+		System.out.println("El resultado es " + (a + b));
+	}
+
+	// función
+	public static String mensaje() {
+		String mensaje = "Hoy es martes";
+		return mensaje;
+	}
+
+	public static int multi(int x, int y) {
+		return x * y;
+	}
+
+	public static void ejecutarCiclo(int dato) {
+		for (int i = 1; i <= dato; i++) {
+			System.out.println(i);
+		}
+	}
+	public static int calcularSuma(int num1,int num2) {
+		return num1 + num2;
+	}
+	public static int calcularResta(int num1,int num2) {
+		return num1 - num2;
+	}
+	public static int calcularMultiplicacion(int num1,int num2) {
+		return num1 * num2;
+	}
+	public static double calcularDividir(int num1,int num2) {
+		return num1 / num2;
+	}
+	public static void realizarOperacion(String opc,int num1,int num2) {
+		switch(opc) {
+		case "s":
+		case "S":
+			System.out.println("La suma es " + calcularSuma(num1,num2));
+			break;
+		case "r":
+		case "R":
+			System.out.println("La resta es " + calcularResta(num1,num2));
+			break;
+		case "m":
+		case "M":
+			System.out.println("La multiplicación es " 
+		+ calcularMultiplicacion(num1,num2));
+			break;
+		case "d":
+		case "D":
+			System.out.println("La división es " + calcularDividir(num1,num2));
+			break;
+		default:
+			System.out.println("No existe la letra opción solicitada");
+			break;
+			
+		}
+	}
+	public static String jugarMaquina(int X) {
+		String jugada;
+		if(X < 3)
+			jugada = "piedra";
+		else if(X >= 3 && X < 6 )
+			jugada = "papel";
+		else
+			jugada = "tijera";
+		return jugada;
+	}
+	public static void jugar(String m,String j) {
+		if(m.equals(j))
+			System.out.println("Empate");
+		else if(m.equals("piedra") && j.equals("papel"))
+			System.out.println("Gana jugador");
+		else if(m.equals("piedra") && j.equals("tijera"))
+			System.out.println("Gana máquina");
+		else if(m.equals("papel") && j.equals("piedra"))
+			System.out.println("Gana máquina");
+		else if(m.equals("papel") && j.equals("tijera"))
+			System.out.println("Gana jugador");
+		else if(m.equals("tijera") && j.equals("papel"))
+			System.out.println("Gana máquina");
+		else if(m.equals("tijera") && j.equals("piedra"))
+			System.out.println("Gana jugador");
+		else
+			System.out.println("Ups no existe la jugada ;(");
+	}
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		/*iniciar();
+		saludar("Cleopatra");
+		sumar(20,5,"Suma");
+		System.out.println(mensaje());
+		int x = 10, y = 2;
+		System.out.println("La multiplicación es " + (multi(x,y)));*/
+		/*
+		 desarrollar un método que permita solicitar al usuario un número límite
+		 crear un bucle desde 1 hasta el límite
+		 */
+		/*System.out.println("Escribe un número límite para el bucle");
+		int L = teclado.nextInt();
+		if(L<=1)
+			System.out.println("Error, no puede ser tan pequeño");
+		else
+			ejecutarCiclo(L);*/
+		/*
+		 desarrollar un programa que solicite al usuario dos números
+		 y además mostrar un menú de opciones 
+		 */
+		/*System.out.println("Escribe un número");
+		int a = teclado.nextInt();
+		System.out.println("Escribe otro número");
+		int b = teclado.nextInt();
+		System.out.println("Escribe la operación:\n\ts suma, r resta, "
+				+ "m multipplicación, d división");
+		String opc = teclado.next();
+		realizarOperacion(opc,a,b);*/
+		/*
+		 Diseñar un sistema de nutricionista
+		 para calcular el IMC
+		 */
+		/*System.out.println("Escribe tu nombre");
+		String nombre = teclado.next();
+		System.out.println("Escribe tu peso");
+		double peso = teclado.nextDouble();
+		System.out.println("Escribe tu altura");
+		double altura = teclado.nextDouble();
+		SistemaIMC.calcularIMC(altura, peso);
+		*/
+		//int X = (int)Math.random()*100;
+		//System.out.println(X);
+		//debuguear
+		/*for(int i = 0;i <=3 ;i++) {
+			X += X;
+			System.out.println(X);
+		}*/
+		/*
+		 piedra, papel o tijera
+		 
+		 */
+		int X = (int)(Math.random()*10);
+		String maquina = jugarMaquina(X);
+		System.out.println("Escribe tu jugada");
+		String jugador = teclado.next();
+		jugar(maquina,jugador);
+		System.out.println("El jugador escribió " + jugador);
+		System.out.println("La máquina jugó " + maquina);
+	}
+
+}
+
+********************************************************************************************************************************************************
+package com.educacionit.modules;
+
+public class SistemaIMC {
+	public static void calcularIMC(double altura, double peso) {
+		double imc = peso / (altura * altura);
+		System.out.println("Tu indice de masa corporal es " + imc);
+		System.out.println(recomendar(imc));
+	}
+	public static String recomendar(double imc) {
+		String rta;
+		if(imc < 18.5)
+			rta="Bajo peso, te recomendamos seguir una dieta con blabla";
+		else if(imc >=18.5 && imc <=24.9)
+			rta= "imc normal ;)";
+		else if(imc >=25 && imc <=29.9)
+			rta= "tienes sobrepeso, puedes hacer blabla";
+		else
+			rta= "estás un poco obeso blabla..";
+		
+		return rta;
+	}
+}
