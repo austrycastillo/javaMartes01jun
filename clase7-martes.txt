@@ -1,0 +1,103 @@
+package com.educacionit.modules;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class AppPrincipal {
+	//procedimientos
+	public static void saludar() {
+		System.out.println("Hola procedimiento");
+	}
+	public static void nombrar(String nombre) {
+		System.out.println("Ahora toma la palabra " + nombre);
+	}
+	public static void sumar(int a,int b) {
+		int suma = a + b;
+		System.out.println("La suma es " + suma);
+	}
+	public static void loguear(String u, String c) {
+		if(u.equals("admin") && c.equals("ab12"))
+			System.out.println("Bienvenido al sistema");
+		else
+			System.out.println("Datos incorrectos!");
+	}
+	public static String cantar() {
+		String canto = "tararan tararan ...";
+		return canto;
+	}
+	public static int mostrar(int dato) {
+		return dato++; 
+	}
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println(cantar());
+		int valor = 50;
+		valor = mostrar(valor) + 56;
+		System.out.println(valor);
+		/*saludar();
+		nombrar("Pepe");
+		int x = 10, y = 5;
+		sumar(x,y);*/
+		/*
+		 crear un sistema que solicite al usuario sus datos de acceso
+		 y muestre la entrada o el rechazo
+		 */
+		
+		/*String usuario = JOptionPane.showInputDialog("Ingresa tu usuario");
+		String clave = JOptionPane.showInputDialog("Ingresa tu clave");
+		loguear(usuario,clave);*/
+		
+		/*
+		 * int[] numeros = { 8, 10, 12, 15, 20, 2 }; // for for (int i = 0; i <
+		 * numeros.length; i++) { System.out.println(numeros[i]); } // foreach for (int
+		 * item : numeros) { System.out.println(item); }
+		 */
+		/*
+		 * solicitar al usuario un número para crear un arreglo con ese tamaño, luego
+		 * rellenar con los números del 1 al número del usuario, mostrar los números e
+		 * indicar la suma de ellos
+		 */
+		/*
+		 * System.out.println("Escribe el número máximo"); int max = teclado.nextInt();
+		 * int arreglo[] = new int[max]; int suma = 0; for (int i = 0, j = 1; i < max;
+		 * i++, j++) { arreglo[i] = j; System.out.println(arreglo[i]); suma +=
+		 * arreglo[i]; } System.out.println("La suma de todo es " + suma);
+		 */
+
+		/*
+		 * atletismo, indicar la cantidad de atletas solicitar el nombre y el tiempo
+		 * determinar el ganador
+		 */
+		/*System.out.println("Cantidad de atletas?");
+		int cant = teclado.nextInt();
+		String nombres[] = new String[cant];
+		double tiempos[] = new double[cant];
+		double min = 100;
+		String ganador = "";
+		for (int i = 0; i < cant; i++) {
+			System.out.println("Ingrese el nombre");
+			nombres[i] = teclado.next();
+			System.out.println("tiempo?");
+			tiempos[i] = teclado.nextDouble();
+			if (tiempos[i] < min) {
+				min = tiempos[i];
+				ganador = nombres[i];
+			}
+
+		}
+		System.out.println("El ganador es " + ganador + ", con un tiempo de " + min);
+*/
+	/*
+	 MÉTODOS:
+	 - PROCEDIMIENTOS
+	 - FUNCIONES (return)
+	 sintaxis:
+	 modificadorAcceso static retorno identificador (){
+	 	instrucciones
+	 }	
+	 */
+		
+	}
+
+}
